@@ -1,0 +1,45 @@
+Système GeoLoc spécifications:
+
+Le système est subdivisé en trois module:
+
+Module 1: Module d'affichage.
+Programme graphique
+Son rôle est d'associer une petite image (icône) avec un type et un numéro de mobile
+Reçoit de l'IPC la position (x,y) du mobile
+Affiche l'icône à la position reçue
+vérifie si la position du mobile a été modifiée et dans le cas échéant rafraichit l'affichage
+Permet la gestion de 200 mobiles
+
+
+Module 2: Langage d'interprétation
+Programme console
+Ce langage lit un fichier texte
+Le nom de se fichier sera hardcodé, pour l'instant: "Commandes_Mobile.txt"
+Le programme renomme ce fichier puis commence à l'interpréter
+Chaque ligne représente une instruction
+sauf les lignes débutant par // qui sont des commentaires
+Dans ce langage il y a, pour l'instant, deux instructions possibles:
+sleep et 
+mobile
+La commande "sleep" a un param: le nombre de millisecondes de sommeil
+Aucune instruction n'est lue pendant le délai de sommeil
+La commande "mobile" possède quatre paramètres: le type, l'id, posX et posY du mobile
+Les instructions sont lues séquentiellement à tour de rôle
+Une fois validées les instructions "mobile" sont envoyées dans l'IPC (voir module 3) pour 
+avertir le module 1.
+Le fichier interprété par ce module peut contenir jusqu'à 100000 commandes (lignes).
+Une fois que le fichier a traité toutes les cmd, le programme attend l'apparition 
+d'un nouveau fichier portant le même nom: Commandes_Mobile.txt, en une boucle infinie.
+
+Module 3: Communication interModule
+Ce module est un IPC (inter process communication) unidirectionnel dont la source est
+dans le module 2 (langage) et la destination dans le module 1 (Affichage). 
+Pour l'instant seules les cmd "mobile" avec leurs paramètres sont transmises, mais dans une évolution
+prochaine, d'autres types de cmd pourraient être transmises.
+Cet IPC peut être une Message Queue, ou autres. À vous de chosir une méthode.
+La transmission des messages doit se faire en temps réel. 
+Un message ne doit être transmis qu'une seule fois. Il doit également être traité une seule fois.
+
+
+
+
