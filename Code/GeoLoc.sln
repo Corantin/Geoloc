@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoLoc", "GeoLoc\GeoLoc.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LecteurEvent", "LecteurEvent\LecteurEvent.csproj", "{7B63E74F-4D28-49F9-8BD4-976C94067A04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{C53A2A3F-A622-4666-A5A3-F50B4B47940B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7B63E74F-4D28-49F9-8BD4-976C94067A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B63E74F-4D28-49F9-8BD4-976C94067A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B63E74F-4D28-49F9-8BD4-976C94067A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C53A2A3F-A622-4666-A5A3-F50B4B47940B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53A2A3F-A622-4666-A5A3-F50B4B47940B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53A2A3F-A622-4666-A5A3-F50B4B47940B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53A2A3F-A622-4666-A5A3-F50B4B47940B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
